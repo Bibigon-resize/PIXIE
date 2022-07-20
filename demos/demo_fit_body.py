@@ -38,7 +38,7 @@ def main(args):
         # if given deca code path, run deca to get face details, here init deca model
         sys.path.insert(0, args.deca_path)
         from decalib.deca import DECA
-        deca = DECA(device=device)
+        deca = DECA(config = pixie_cfg, device=device)
         use_deca = True
     else:
         use_deca = False
